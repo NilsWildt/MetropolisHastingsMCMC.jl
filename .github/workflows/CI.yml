@@ -55,6 +55,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using BarkerMCMC
-            DocMeta.setdocmeta!(BarkerMCMC, :DocTestSetup, :(using BarkerMCMC); recursive=true)
-            doctest(BarkerMCMC)'
+            using MatropolisHastingsMCMC
+            DocMeta.setdocmeta!(MetropolisHastingsMCMC, :DocTestSetup, :(using MetropolisHastingsMCMC); recursive=true)
+            doctest(MetropolisHastingsMCMC)'
