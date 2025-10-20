@@ -1,8 +1,7 @@
 # MetropolisHastingsMCMC
 
-`MetropolisHastingsMCMC.jl` is a compact adaptive random-walk Metropolis–Hastings sampler.
-It keeps the `LogDensityProblems.jl` workflow used by the Barker sampler while dropping the gradient requirement.
-Pair it with the Barker random-walk alternative from [BarkerMCMC.jl](https://github.com/scheidan/BarkerMCMC.jl) when you need split proposals or gradient-free exploration.
+`MetropolisHastingsMCMC.jl` is a compact random-walk Metropolis–Hastings sampler.
+Its design mirrors [BarkerMCMC.jl](https://github.com/scheidan/BarkerMCMC.jl), retaining the `LogDensityProblems.jl` workflow while staying gradient-free thanks to plain Metropolis–Hastings proposals.
 
 ## Installation
 
