@@ -31,6 +31,14 @@ const _PKGROOT = normpath(joinpath(@__DIR__, ".."))
     @test all(abs.(μ) .< 0.25)
 end
 
+@testitem "SimpleLogDensityProblem reports its capabilities" begin
+    using MetropolisHastingsMCMC
+    LDP = MetropolisHastingsMCMC.LogDensityProblems
+    problem = MetropolisHastingsMCMC.SimpleLogDensityProblem(x -> -0.5 * sum(abs2, x), 2)
+    @test LDP.capabilities(typeof(problem)) == LDP.LogDensityOrder{0}()
+    @test LDP.capabilities(problem) == LDP.LogDensityOrder{0}()
+end
+
 @testitem "LogDensityProblems workflow" tags=[:integration, :stochastic] begin
     using MetropolisHastingsMCMC
     using TransformVariables: transform, inverse, as, asℝ, asℝ₊

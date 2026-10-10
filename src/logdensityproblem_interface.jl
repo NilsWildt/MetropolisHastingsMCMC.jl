@@ -13,7 +13,7 @@ end
 
 LogDensityProblems.dimension(lp::SimpleLogDensityProblem) = lp.dim
 
-function LogDensityProblems.capabilities(::Type{SimpleLogDensityProblem})
+function LogDensityProblems.capabilities(::Type{<:SimpleLogDensityProblem})
     LogDensityProblems.LogDensityOrder{0}()
 end
 
