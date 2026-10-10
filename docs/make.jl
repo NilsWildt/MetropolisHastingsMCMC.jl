@@ -11,7 +11,7 @@ DocMeta.setdocmeta!(MetropolisHastingsMCMC, :DocTestSetup, :(using MetropolisHas
 makedocs(;
     modules=[MetropolisHastingsMCMC],
     authors="Andreas Scheidegger <andreas.scheidegger@eawag.ch> and contributors",
-    repo="https://github.com/scheidan/MetropolisHastingsMCMC.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/NilsWildt/MetropolisHastingsMCMC.jl/blob/{commit}{path}#{line}",
     sitename="MetropolisHastingsMCMC.jl",
     checkdocs=:exports,
     format=Documenter.HTML(;
@@ -25,6 +25,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/scheidan/MetropolisHastingsMCMC.jl",
+    repo="github.com/NilsWildt/MetropolisHastingsMCMC.jl",
     devbranch="main",
 )
