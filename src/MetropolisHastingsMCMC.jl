@@ -186,7 +186,7 @@ end
     test = TwoSampleTest(150, 60)
     subject = TestSubject(StdNormalModel(), RWKernel(1.0))
     Random.seed!(rng, 42)
-    @test seqmcmctest(test, subject, 0.05, 25; show_progress=false)
+    @test seqmcmctest(rng, test, subject, 0.05, 25; show_progress=false)
 end
 
 end
