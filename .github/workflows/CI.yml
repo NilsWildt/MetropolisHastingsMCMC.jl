@@ -23,6 +23,8 @@ jobs:
       fail-fast: false
       matrix:
         version:
+          - '1.10'
+          - '1.12'
           - '1.13'
           - '1'  # latest stable 1.x release of Julia
         os:
